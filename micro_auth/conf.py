@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     TENANT_ID: str = Field(default='', env="TENANT_ID")
 
     class Config:
-        env_file = ".env"
+        env_file = ".env", ".env.dev"
         env_file_encoding = "utf-8"
         case_sensitive = True
 
